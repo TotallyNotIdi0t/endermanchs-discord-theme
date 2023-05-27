@@ -1,0 +1,107 @@
+/* //META {"name": "ClearVision", "description": "Public BETA for ClearVision v6.", "author": "Zerthox", "version": "6 BETA", "website": "https://clearvision.gitlab.io"} *//**/
+/* "ClearVision v6 BETA" by Zerthox */
+
+/* IMPORT CSS */
+@import url(https://clearvision.gitlab.io/v6/main.css);
+
+/* SETTINGS */
+:root {
+
+	/* ACCENT COLORS */
+	--main-color: #dd4537; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+	--hover-color: #1e63b3; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+	--success-color: #43b581; /* success accent color (hex, rgb or hsl) [default: #43b581] */
+	--danger-color: #982929; /* danger accent color (hex, rgb or hsl) [default: #982929] */
+
+	/* STATUS COLORS */
+	--online-color: #43b581; /* online status color (hex, rgb or hsl) [default: #43b581] */
+	--idle-color: #faa61a; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
+	--dnd-color: #982929; /* dnd status color (hex, rgb or hsl) [default: #982929] */
+	--streaming-color: #593695; /* streaming status color (hex, rgb or hsl) [default: #593695] */
+	--offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
+
+	/* GENERAL */
+	--main-font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; /* main font for app (font must be installed) [default: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif] */
+	--code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+	--server-columns: 1; /* amount of server list columns [default: 1] */
+	--channels-width: 220px; /* channel list width (240px for Discord default) [default: 220px] */
+	--members-width: 240px; /* member list width [default: 240px] */
+	--avatar-roundness: 50%; /* avatar roundness (0% for squares, 50% for circles) [default: 50%] */
+
+	/* APP BACKGROUND */
+	--background-shading: 100%; /* app background shading (0 for complete smoothness) [default: 100%] */
+	--background-overlay: rgba(0, 0, 0, 0.25); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
+	--background-image: url(https://malwarewatch.org/images/wallpapers/Nebula.png); /* app background image (link must be HTTPS) [default:  url(https://i.imgur.com/06nPfnl.jpg)]*/
+	--background-position: center; /* app background position [default: center] */
+	--background-size: cover; /* app background size [default: cover] */
+	--background-brightness: 100%; /* app background brightness (< 100% for darken, > 100% for lighten) [default: 100%] */
+	--background-contrast: 100%; /* app background contrast [default: 100%] */
+	--background-saturation: 100%; /* app background saturation [default: 100%] */
+	--background-invert: 0%; /* app background invert (0 - 100%)  [default: 0%] */
+	--background-grayscale: 0%; /* app background grayscale ( 0 - 100%) [default: 0%] */
+	--background-sepia: 0%; /* app background sepia (0 - 100%) [default: 0%] */
+	--background-blur: 0px; /* app background blur [default: 0px] */
+
+	/* MODAL BACKDROP */
+	--backdrop-overlay: rgba(0, 0, 0, 0.8); /* modal backdrop overlay color/gradient [default: rgba(0, 0, 0, 0.8)] */
+	--backdrop-image: url(https://malwarewatch.org/images/wallpapers/Nebula.png); /* modal backdrop image (link must be HTTPS) [default:  url(https://i.imgur.com/06nPfnl.jpg)]*/
+	--backdrop-position: center; /* modal backdrop position [default: center] */
+	--backdrop-size: cover; /* modal backdrop size [default: cover] */
+	--backdrop-brightness: 100%; /* modal backdrop brightness (< 100% for darken, > 100% for lighten) [default: 100%] */
+	--backdrop-contrast: 100%; /* modal backdrop contrast [default: 100%] */
+	--backdrop-saturation: 100%; /* modal backdrop saturation [default: 100%] */
+	--backdrop-invert: 0%; /* modal backdrop invert (0 - 100%)  [default: 0%] */
+	--backdrop-grayscale: 0%; /* modal backdrop grayscale ( 0 - 100%) [default: 0%] */
+	--backdrop-sepia: 0%; /* modal backdrop sepia (0 - 100%) [default: 0%] */
+	--backdrop-blur: 0px; /* modal backdrop blur [default: 0px] */
+
+	/* USER POPOUT BACKGROUND */
+	--user-popout-image: url(https://malwarewatch.org/images/wallpapers/Nebula.png); /* app background image (link must be HTTPS) [default: url(https://i.imgur.com/06nPfnl.jpg)]*/
+	--user-popout-position: center; /* user popout background position [default: center] */
+	--user-popout-size: cover; /* user popout background size [default: cover] */
+	--user-popout-brightness: 100%; /* user popout background brightness (< 100% for darken, > 100% for lighten) [default: 100%] */
+	--user-popout-contrast: 100%; /* user popout background contrast [default: 100%] */
+	--user-popout-saturation: 100%; /* user popout background saturation [default: 100%] */
+	--user-popout-invert: 0%; /* user popout background invert (0 - 100%) [default: 0%] */
+	--user-popout-grayscale: 0%; /* user popout background grayscale (0 - 100%) [default: 0%] */
+	--user-popout-sepia: 0%; /* user popout background sepia (0 - 100%) [default: 0%] */
+	--user-popout-blur: 3px; /* user popout background blur [default: 3px] */
+
+	/* USER MODAL BACKGROUND */
+	--user-modal-image: url(https://malwarewatch.org/images/wallpapers/Nebula.png); /* app background image (link must be HTTPS) [default: url(https://i.imgur.com/06nPfnl.jpg)]*/
+	--user-modal-position: center; /* user modal background position [default: center] */
+	--user-modal-size: cover; /* user modal background size [default: cover] */
+	--user-modal-brightness: 100%; /* user modal background brightness (< 100% for darken, > 100% for lighten) [default: 100%] */
+	--user-modal-contrast: 100%; /* user modal background contrast [default: 100%] */
+	--user-modal-saturation: 100%; /* user modal background saturation [default: 100%] */
+	--user-modal-invert: 0%; /* user modal background invert (0 - 100%) [default: 0%] */
+	--user-modal-grayscale: 0%; /* user modal background grayscale (0 - 100%) [default: 0%] */
+	--user-modal-sepia: 0%; /* user modal background sepia (0 - 100%) [default: 0%] */
+	--user-modal-blur: 3px; /* user modal background blur [default: 3px] */
+
+	/* HOME BUTTON ICON */
+	--home-icon: url(https://clearvision.gitlab.io/icons/discord.svg); /* home button icon (link must be HTTPS) [default:  url(https://clearvision.gitlab.io/icons/discord.svg)]*/
+	--home-position: center; /* home button icon position [default: center] */
+	--home-size: 40px; /* home button icon size [default: 40px] */
+}
+/*
+     FILE ARCHIVED ON 12:33:23 Oct 21, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:48:02 Dec 25, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 130.42
+  exclusion.robots: 0.113
+  exclusion.robots.policy: 0.105
+  cdx.remote: 0.062
+  esindex: 0.008
+  LoadShardBlock: 73.03 (3)
+  PetaboxLoader3.datanode: 78.575 (4)
+  CDXLines.iter: 12.273 (3)
+  load_resource: 105.693
+  PetaboxLoader3.resolve: 66.641
+*/
